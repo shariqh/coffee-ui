@@ -33,19 +33,19 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="md:snap-start space-y-8 md:h-screen">
+        <div className="flex flex-col md:snap-start space-y-8 md:h-screen justify-center">
           <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
             now brewing.
           </h1>
           <CoffeeGrid isCurrentBrew/>
         </div>
-        <div className="md:snap-start md:h-screen">
+        <div className="flex flex-col md:snap-start md:h-screen justify-center">
           <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
             brew tools.
           </h1>
-          <CoffeeGrid isCurrentBrew/>
+          Coming soon...
         </div>
-        <div className="md:snap-start space-y-8 md:h-screen">
+        <div className="flex flex-col md:snap-start space-y-8 md:h-screen justify-center">
           <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
             past brews.
           </h1>
