@@ -1,82 +1,50 @@
 import Head from 'next/head'
+import Image from "next/image"
+import CoffeeGrid from "../components/CoffeeGrid"
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <div className="bg-gradient-to-r from-[#C8AB8F] to-[#A78D6B] min-w-max">
+      <header className="min-w-screen h-16">
+        <div className="flex p-4 max-w-screen-lg">
+          <p className="font-bold uppercase text-6xl text-gray-100">coffee.</p>
         </div>
+      </header>
+      <main className="mx-auto p-8 mt-16 space-y-24 max-w-screen-lg min-h-screen">
+        <banner className="lg:flex lg:place-items-center">
+          <div className="space-y-4">
+            <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
+              quick stats.
+            </h1>
+            <p className="font-semibold text-6xl lg:text-5xl text-gray-300">226 cups of coffee made.</p>
+            <p className="font-semibold text-5xl lg:text-4xl text-gray-300">84 ounces of coffee consumed.</p>
+            <p className="font-semibold text-4xl lg:text-3xl text-gray-300">9 1/2 hours of pouring.</p>
+            <p className="font-semibold text-3xl lg:text-2xl text-gray-300">1808 ounces of water consumed.</p>
+          </div>
+          <div className="flex lg:flex-grow justify-center lg:justify-end">
+            <div className='relative mt-16 w-96 h-96'>
+              <Image
+                placeholder="blur"
+                blurDataURL="/static/images/chemex.png"
+                src="/static/images/chemex.png"
+                alt=""
+                layout="fill"
+              />
+            </div>
+          </div>
+        </banner>
+        <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
+          now brewing.
+        </h1>
+        <CoffeeGrid isCurrentBrew/>
+        <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
+          brew tools.
+        </h1>
+        <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
+          past brews.
+        </h1>
+        <CoffeeGrid/>
       </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
     </div>
   )
 }
