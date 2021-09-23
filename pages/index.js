@@ -10,7 +10,7 @@ export default function Home() {
           <p className="font-bold uppercase text-6xl text-gray-100">coffee.</p>
         </div>
       </header>
-      <main className="my-80 md:my-24 lg:my-0 mx-8 lg:px-8 lg:mx-auto space-y-96 lg:space-y-0 max-w-screen-lg">
+      <main className="py-80 md:py-24 lg:py-0 mx-8 lg:px-8 lg:mx-auto space-y-96 lg:space-y-0 max-w-screen-lg">
         <banner className="lg:flex lg:h-screen lg:place-items-center">
           <div className="space-y-4">
             <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
