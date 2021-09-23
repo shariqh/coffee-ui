@@ -10,8 +10,8 @@ export default function Home() {
           <p className="font-bold uppercase text-6xl text-gray-100">coffee.</p>
         </div>
       </header>
-      <main className="mx-auto p-8 mt-16 space-y-24 max-w-screen-lg min-h-screen">
-        <banner className="lg:flex lg:place-items-center">
+      <main className="my-80 md:my-24 lg:my-0 mx-8 lg:px-8 lg:mx-auto space-y-96 lg:space-y-0 max-w-screen-lg">
+        <banner className="lg:flex lg:h-screen lg:place-items-center">
           <div className="space-y-4">
             <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
               quick stats.
@@ -33,18 +33,18 @@ export default function Home() {
             </div>
           </div>
         </banner>
-        <div className="space-y-8 h-screen">
+        <div className="space-y-8 lg:h-screen">
           <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
             now brewing.
           </h1>
           <CoffeeGrid isCurrentBrew/>
         </div>
-        <div className="h-screen">
+        <div className="lg:h-screen">
           <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
             brew tools.
           </h1>
         </div>
-        <div className="snap-both space-y-8 h-screen">
+        <div className="space-y-8 min-h-screen">
           <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
             past brews.
           </h1>
