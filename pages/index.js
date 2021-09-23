@@ -33,17 +33,21 @@ export default function Home() {
             </div>
           </div>
         </banner>
-        <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
-          now brewing.
-        </h1>
-        <CoffeeGrid isCurrentBrew/>
+        <div className="space-y-8">
+          <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
+            now brewing.
+          </h1>
+          <CoffeeGrid isCurrentBrew/>
+        </div>
         <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
           brew tools.
         </h1>
-        <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
-          past brews.
-        </h1>
-        <CoffeeGrid/>
+        <div className="space-y-8">
+          <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
+            past brews.
+          </h1>
+          <CoffeeGrid />
+        </div>
       </main>
     </div>
   )

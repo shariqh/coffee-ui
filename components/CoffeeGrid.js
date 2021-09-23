@@ -1,6 +1,6 @@
 import useSWR from 'swr'
 import fetcher from '../lib/fetcher'
-import coffees from "../pages/api/coffees"
+import Coffee from "./Coffee"
 
 export default function CoffeeGrid({isCurrentBrew}) {
   let coffees = []
@@ -18,7 +18,9 @@ export default function CoffeeGrid({isCurrentBrew}) {
 
   return (
     <>
-      {JSON.stringify(coffees)}
+      {coffees.map((coffee) => (
+        <Coffee coffee={coffee}/>
+      ))}
     </>
   )
 }
