@@ -4,14 +4,14 @@ import CoffeeGrid from "../components/CoffeeGrid"
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-r from-[#C8AB8F] to-[#A78D6B] min-w-max">
-      <header className="min-w-screen h-16">
+    <div className="bg-gradient-to-r from-[#C8AB8F] to-[#A78D6B] min-w-max md:h-screen md:overflow-scroll md:overflow-x-hidden md:snap md:snap-y md:snap-mandatory">
+      <header className="md:snap-start min-w-screen h-16">
         <div className="flex p-4 max-w-screen-lg">
           <p className="font-bold uppercase text-6xl text-gray-100">coffee.</p>
         </div>
       </header>
-      <main className="py-80 md:py-24 lg:py-0 mx-8 lg:px-8 lg:mx-auto space-y-96 lg:space-y-0 max-w-screen-lg">
-        <banner className="lg:flex lg:h-screen lg:place-items-center">
+      <main className="py-80 md:py-0 mx-8 lg:px-8 lg:mx-auto space-y-96 md:space-y-0 max-w-screen-lg">
+        <div className="md:snap-start lg:flex md:h-screen md:py-16 lg:place-items-center">
           <div className="space-y-4">
             <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
               quick stats.
@@ -32,19 +32,20 @@ export default function Home() {
               />
             </div>
           </div>
-        </banner>
-        <div className="space-y-8 lg:h-screen">
+        </div>
+        <div className="md:snap-start space-y-8 md:h-screen">
           <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
             now brewing.
           </h1>
           <CoffeeGrid isCurrentBrew/>
         </div>
-        <div className="lg:h-screen">
+        <div className="md:snap-start md:h-screen">
           <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
             brew tools.
           </h1>
+          <CoffeeGrid isCurrentBrew/>
         </div>
-        <div className="space-y-8 min-h-screen">
+        <div className="md:snap-start space-y-8 md:h-screen">
           <h1 className="font-semibold text-8xl lg:text-7xl text-gray-300 uppercase underline">
             past brews.
           </h1>
