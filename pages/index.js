@@ -1,8 +1,14 @@
 import Head from 'next/head'
 import Image from "next/image"
 import CoffeeGrid from "../components/CoffeeGrid"
+import CountUp from "react-countup"
 
 export default function Home() {
+  const coffeeCups = 226
+  const coffeeOunces = 84
+  const pourMinutes = 570
+  const waterOunces = 1808
+
   return (
     <div
       className="bg-gradient-to-r from-[#C8AB8F] to-[#A78D6B] min-w-max md:h-screen md:overflow-scroll md:overflow-x-hidden md:snap md:snap-y md:snap-mandatory">
@@ -18,10 +24,20 @@ export default function Home() {
               className="px-1 font-semibold text-8xl lg:text-7xl text-[#A78D6B] uppercase bg-gray-100 drop-shadow-2xl">
               quick stats.
             </span>
-            <p className="font-semibold text-6xl lg:text-5xl text-white">226 cups of coffee made.</p>
-            <p className="font-semibold text-5xl lg:text-4xl text-white">84 ounces of coffee consumed.</p>
-            <p className="font-semibold text-4xl lg:text-3xl text-white">9 1/2 hours of pouring.</p>
-            <p className="font-semibold text-3xl lg:text-2xl text-white">1808 ounces of water consumed.</p>
+            <p className="font-semibold text-6xl lg:text-5xl text-white">
+              <CountUp end={coffeeCups} duration="1"/>
+              &nbsp;cups of coffee made.
+            </p>
+            <p className="font-semibold text-5xl lg:text-4xl text-white">
+              <CountUp end={coffeeOunces} duration="1"/>
+              &nbsp;ounces of coffee consumed.
+            </p>
+            <p className="font-semibold text-4xl lg:text-3xl text-white">
+              <CountUp end={pourMinutes} duration="1"/>
+              &nbsp;minutes of pouring.</p>
+            <p className="font-semibold text-3xl lg:text-2xl text-white">
+              <CountUp end={waterOunces} duration="1"/>
+              &nbsp;ounces of water consumed.</p>
           </div>
           <div className="flex lg:flex-grow justify-center lg:justify-end">
             <div className='relative mt-16 w-96 h-96'>

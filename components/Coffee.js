@@ -1,7 +1,7 @@
 export default function Coffee({coffee}) {
   return (
     <>
-      <div className="bg-yellow-100 hover:bg-[#B6A99A] hover:shadow-2xl opacity-60 rounded-xl text-4xl">
+      <div className="bg-yellow-100 hover:bg-[#FFF8EA] hover:shadow-2xl opacity-60 rounded-xl text-4xl">
         <div className="p-4 space-y-2">
           <div>
             <p className="font-semibold uppercase text-3xl md:text-2xl xl:text-xl">{coffee.brand}</p>
