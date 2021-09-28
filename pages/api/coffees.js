@@ -5,6 +5,7 @@ export default async (_, res) => {
   const { results } = await response
 
   const coffees = results.map((coffee) => ({
+    id: coffee.id,
     name: coffee.properties?.name?.title[0]?.plain_text,
     isLimitedRun: coffee.properties?.is_limited_run?.checkbox,
     productLink: coffee.properties?.product_link?.url,
