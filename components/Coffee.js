@@ -1,7 +1,7 @@
 import {ChevronUpIcon, ShoppingCartIcon, ExternalLinkIcon} from "@heroicons/react/outline"
 import {Disclosure} from '@headlessui/react'
-import Link from 'next/Link'
-import Image from 'next/Image'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Coffee({coffee}) {
   return (
