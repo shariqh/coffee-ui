@@ -4,6 +4,8 @@ import CoffeeGrid from "../components/CoffeeGrid"
 import CountUp from "react-countup"
 
 export default function Home() {
+  const storageBucket=process.env.FIREBASE_STORAGE_URL
+
   const coffeeCups = 226
   const coffeeOunces = 84
   const pourMinutes = 570
@@ -14,7 +16,7 @@ export default function Home() {
       className="bg-gradient-to-r from-[#C8AB8F] to-[#A78D6B] min-w-max lg:h-screen lg:overflow-scroll lg:overflow-x-hidden lg:snap lg:snap-y lg:snap-mandatory">
       <header className="lg:snap-start min-w-screen h-16">
         <div className="flex p-4 max-w-screen-lg">
-          <p className="font-bold uppercase text-6xl text-white">coffee.</p>
+          <p className="font-bold uppercase text-9xl md:text-6xl text-white">coffee.</p>
         </div>
       </header>
       <main className="py-80 md:py-44 lg:py-0 mx-8 lg:px-8 lg:mx-auto space-y-96 lg:space-y-0 max-w-screen-lg">
@@ -24,27 +26,35 @@ export default function Home() {
               className="px-1 font-semibold text-8xl lg:text-7xl text-[#A78D6B] uppercase bg-gray-100 drop-shadow-2xl">
               quick stats.
             </span>
-            <p className="font-semibold text-6xl lg:text-5xl text-white">
+            <p className="font-semibold text-7xl lg:text-5xl text-white">
               <CountUp end={coffeeCups} duration="1.5"/>
               &nbsp;cups of coffee made.
             </p>
-            <p className="font-semibold text-5xl lg:text-4xl text-white">
+            <p className="font-semibold text-6xl lg:text-4xl text-white">
               <CountUp end={coffeeOunces} duration="1"/>
               &nbsp;ounces of coffee consumed.
             </p>
-            <p className="font-semibold text-4xl lg:text-3xl text-white">
+            <p className="font-semibold text-5xl lg:text-3xl text-white">
               <CountUp end={pourMinutes} duration="2"/>
               &nbsp;minutes of pouring.</p>
-            <p className="font-semibold text-3xl lg:text-2xl text-white">
+            <p className="font-semibold text-4xl lg:text-2xl text-white">
               <CountUp end={waterOunces} duration="2.5"/>
               &nbsp;ounces of water consumed.</p>
           </div>
           <div className="flex lg:flex-grow justify-center lg:justify-end">
             <div className="relative w-[1024px] h-[656px] overflow-visible">
+              {/*<Image*/}
+              {/*  placeholder="blur"*/}
+              {/*  blurDataURL="/static/images/coffee2.png"*/}
+              {/*  src="/static/images/coffee2.png"*/}
+              {/*  alt=""*/}
+              {/*  layout="fill"*/}
+              {/*  objectFit="contain"*/}
+              {/*/>*/}
               <Image
                 placeholder="blur"
-                blurDataURL="/static/images/coffee2.png"
-                src="/static/images/coffee2.png"
+                blurDataURL={storageBucket + '/coffee%2Fhero.png?alt=media'}
+                src={storageBucket + '/coffee%2Fhero.png?alt=media'}
                 alt=""
                 layout="fill"
                 objectFit="contain"
