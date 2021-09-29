@@ -20,7 +20,7 @@ export default function Coffee({coffee}) {
         </div>
       </div>
       <span className="hidden group-hover:block my-auto">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-32 w-32" fill="none"
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-32 w-32 text-white" fill="none"
              viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
         </svg>
