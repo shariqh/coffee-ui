@@ -13,14 +13,14 @@ export default function Home() {
 
   return (
     <div
-      className="bg-gradient-to-r from-[#C8AB8F] to-[#A78D6B] min-w-max lg:h-screen lg:overflow-scroll lg:overflow-x-hidden lg:snap lg:snap-y lg:snap-mandatory">
-      <header className="lg:snap-start min-w-screen h-16">
+      className="bg-gradient-to-r from-[#C8AB8F] to-[#A78D6B] min-w-max md:overflow-scroll md:overflow-x-hidden">
+      <header className="min-w-screen h-16">
         <div className="flex p-4 max-w-screen-lg">
           <p className="font-bold uppercase text-9xl md:text-6xl text-white">coffee.</p>
         </div>
       </header>
-      <main className="py-80 md:py-44 lg:py-0 mx-8 lg:px-8 lg:mx-auto space-y-96 lg:space-y-0 max-w-screen-lg">
-        <div className="lg:snap-start lg:flex md:h-screen lg:py-16 lg:place-items-center">
+      <main className="py-80 md:py-44 lg:py-0 lg:pb-24 mx-8 lg:px-8 lg:mx-auto space-y-96 lg:space-y-0 max-w-screen-lg">
+        <div className="lg:flex md:min-h-screen lg:py-16 lg:place-items-center">
           <div className="space-y-4 lg:flex-shrink-0">
             <span
               className="px-1 font-semibold text-8xl lg:text-7xl text-[#A78D6B] uppercase bg-gray-100 drop-shadow-2xl">
@@ -54,21 +54,21 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col lg:snap-start space-y-8 md:h-screen justify-center">
+        <div className="flex flex-col space-y-8 md:min-h-screen justify-center">
           <h1
             className="px-1 font-semibold text-8xl lg:text-7xl text-white uppercase underline drop-shadow-2xl">
             now brewing.
           </h1>
           <CoffeeGrid isCurrentBrew/>
         </div>
-        <div className="flex flex-col lg:snap-start lg:h-screen justify-center">
+        <div className="flex flex-col md:min-h-screen justify-center">
           <h1
             className="px-1 font-semibold text-8xl lg:text-7xl text-white uppercase underline drop-shadow-2xl">
             brew tools.
           </h1>
           Coming soon...
         </div>
-        <div className="flex flex-col lg:snap-start space-y-8 md:h-screen justify-center">
+        <div className="flex flex-col space-y-8 md:min-h-screen justify-center">
           <h1
             className="px-1 font-semibold text-8xl lg:text-7xl text-white uppercase underline drop-shadow-2xl">
             past brews.

@@ -41,9 +41,9 @@ export default function Coffee({coffee}) {
                 />
               </Disclosure.Button>
               <Disclosure.Panel
-                className="p-4 space-y-8 text-2xl text-white bg-[#77a780] rounded-b-xl">
+                className="p-4 space-y-8 lg:space-y-2 text-2xl text-white bg-[#77a780] rounded-b-xl">
                 <div
-                  className="relative flex mx-auto h-[650px] w-[650px] md:h-96 md:w-96 rounded-full bg-yellow-100 shadow-xl">
+                  className="relative flex mx-auto h-[650px] w-[650px] md:h-96 md:w-96 lg:h-64 lg:w-64 rounded-full bg-yellow-100 shadow-xl">
                   {coffee.imageLink ? <Image
                       placeholder="blur"
                       blurDataURL={storageBucket + coffee.imageLink + altTag}
@@ -58,8 +58,8 @@ export default function Coffee({coffee}) {
                     </svg>
                   }
                 </div>
-                <span className="flex justify-between text-5xl">
-                  <div className="rounded-xl h-12 w-96 bg-gradient-to-r from-yellow-100 to-yellow-900">
+                <span className="flex justify-between text-5xl lg:text-3xl">
+                  <div className="align-bottom rounded-xl w-96 bg-gradient-to-r from-yellow-100 to-yellow-900">
                     <ul>
                       <li>
                         <ul className="grid grid-cols-10 h-8">
@@ -73,12 +73,12 @@ export default function Coffee({coffee}) {
                   <p>{usdFormatter.format(pricePerOz)} / oz.</p>
                 </span>
                 <div className="flex px-24 bg-[#3B5340] min-h-[200px] rounded-xl">
-                  {coffee.rating && <p className="m-auto pr-16 text-8xl">{coffee.rating}</p>}
-                  <p className="m-auto text-4xl">{coffee.review}</p>
+                  {coffee.rating && <p className="m-auto pr-16 text-8xl lg:text-7xl">{coffee.rating}</p>}
+                  <p className="m-auto text-4xl lg:text-3xl">{coffee.review}</p>
                 </div>
                 <div className="flex mx-4 justify-between">
-                  <Link href={coffee.productLink}><a><ExternalLinkIcon className="h-16 w-16"/></a></Link>
-                  <Link href={coffee.purchaseLink}><a><ShoppingCartIcon className="h-16 w-16"/></a></Link>
+                  <Link href={coffee.productLink}><a><ExternalLinkIcon className="h-16 lg:h-8 w-16 lg:w-8"/></a></Link>
+                  <Link href={coffee.purchaseLink}><a><ShoppingCartIcon className="h-16 lg:h-8 w-16 lg:w-8"/></a></Link>
                 </div>
               </Disclosure.Panel>
             </>
