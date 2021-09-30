@@ -2,6 +2,7 @@ import {ChevronUpIcon, ShoppingCartIcon, ExternalLinkIcon, StarIcon} from "@hero
 import {Disclosure} from '@headlessui/react'
 import Link from 'next/link'
 import Image from 'next/image'
+import {RoastSlider} from "./RoastSlider"
 
 export default function Coffee({coffee}) {
   const storageBucket = "https://firebasestorage.googleapis.com/v0/b/shariq-dev.appspot.com/o/coffee%2F"
@@ -57,8 +58,18 @@ export default function Coffee({coffee}) {
                     </svg>
                   }
                 </div>
-                <span className="flex mx-4 justify-between text-5xl">
-                  {coffee.roastLevel}
+                <span className="flex justify-between text-5xl">
+                  <div className="rounded-xl h-12 w-96 bg-gradient-to-r from-yellow-100 to-yellow-900">
+                    <ul>
+                      <li>
+                        <ul className="grid grid-cols-10 h-8">
+                          {[...Array(10)].map((_, i) => (
+                            <RoastSlider key={i} index={i} roastLevel={coffee.roastLevel}/>
+                          ))}
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
                   <p>{usdFormatter.format(pricePerOz)} / oz.</p>
                 </span>
                 <div className="flex px-24 bg-[#3B5340] min-h-[200px] rounded-xl">
