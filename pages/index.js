@@ -4,7 +4,8 @@ import CoffeeGrid from "../components/CoffeeGrid"
 import CountUp from "react-countup"
 
 export default function Home() {
-  const storageBucket = "https://firebasestorage.googleapis.com/v0/b/shariq-dev.appspot.com/o"
+  const storageBucket = "https://firebasestorage.googleapis.com/v0/b/shariq-dev.appspot.com/o/coffee%2F"
+  const altTag = "?alt=media"
   const coffeeCups = 226
   const coffeeOunces = 84
   const pourMinutes = 570
@@ -44,9 +45,9 @@ export default function Home() {
             <div className="relative w-[1024px] h-[656px] overflow-visible">
               <Image
                 placeholder="blur"
-                blurDataURL={storageBucket + '/coffee%2Fhero.png?alt=media'}
-                src={storageBucket + '/coffee%2Fhero.png?alt=media'}
-                alt=""
+                blurDataURL={storageBucket + 'hero.png' + altTag}
+                src={storageBucket + 'hero.png' + altTag}
+                alt="banner image"
                 layout="fill"
                 objectFit="contain"
               />
