@@ -12,6 +12,7 @@ export default async (_, res) => {
     roastDate: coffee.properties?.roast_date?.date?.start,
     weight: coffee.properties?.weight?.number,
     rating: coffee.properties?.rating?.select?.name,
+    review: coffee.properties?.review?.rich_text[0]?.plain_text,
     roastLevel: coffee.properties?.roast_level?.select?.name,
     location: coffee.properties?.location?.rich_text[0]?.plain_text,
     brand: coffee.properties?.brand?.select?.name,
