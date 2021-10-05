@@ -35,7 +35,7 @@ export default function Home() {
         <meta name="twitter:image" content={`${siteMetadata.siteUrl}${siteMetadata.socialBanner}`}/>
       </Head>
       <div
-        className="bg-gradient-to-r from-[#C8AB8F] to-[#A78D6B] min-w-max md:overflow-scroll md:overflow-x-hidden">
+        className="bg-gradient-to-r from-[#C8AB8F] to-[#A78D6B] min-w-max md:overflow-x-hidden">
         <header className="min-w-screen h-16">
           <div className="flex p-4 max-w-screen-lg">
             <p className="font-bold uppercase text-9xl md:text-6xl text-white">coffee addict.</p>
